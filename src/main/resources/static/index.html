@@ -1,0 +1,114 @@
+<!DocType html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title> Ciclo 3 G9! </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/misFunciones.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+</head>
+<body>
+    <h1>RENTA CAR!</h1>
+
+<!--                                     GAMA                -->
+<div id="AGama">
+    <h5>Adicionar /Actualizar Gama</h5>
+    <div id="actGama">
+        <input type="number" id="idGama" placeholder="id">
+        <input type="text" id="nameGama" placeholder="name">
+        <input type="text" id="descriptionG" placeholder="description">
+    </div>
+        <br>
+        <button class="btn btn-primary" id="guardarGama" onclick="guardarGama()">Guardar Gama</button>
+        <button class="btn btn-primary" id="editarGama" onclick="editarGama()">Actualizar Gama</button>
+        <br>
+        <h5>Consultar Gama</h5>
+        <button class="btn btn-primary" id="consultarGama" onclick="getGama()"> Consultar </button>
+        <div id="resultadoGama"></div>
+
+</div>
+<!--                                     AUTOS                -->
+<div id="Autos">
+    <h5>Adicionar /Actualizar Auto</h5>
+    <div id="postCar">
+        <input type="number" id="id" placeholder="id">
+        <input type="text" id="name" placeholder="name">
+        <input type="text" id="brand" placeholder="brand">
+        <input type="number" id="year" placeholder="year">
+        <input type="text" id="description" placeholder="description">
+        <input type="number" id="idGamaC" placeholder="idGama">
+    </div>
+    <br>
+    <button class="btn btn-primary" id="guardarAuto" onclick="saveCar()">Guardar</button>
+    <button class="btn btn-primary" id="editarAuto" onclick="updateCar()">Actualizar</button>
+    <br>
+    <h5>Consultar Auto</h5>
+    <button class="btn btn-primary" id="consultarAuto" onclick="getCars()"> Consultar </button>
+    <div id="resultado"></div>
+</div>
+<!--                                     CLIENT                    -->
+<div id="client">
+    <br>
+    <h5>Adicionar / Actualizar Cliente</h5>
+    <div>
+        <input type="number" id="idClient" placeholder="Id de Cliente">
+        <input type="text" id="emailClient" placeholder="email de Cliente">
+        <input type="text" id="password" placeholder="password de Cliente">
+        <input type="text" id="nameClient" placeholder="name de Cliente">
+        <input type="number" id="ageClient" placeholder="Edad de Cliente">
+    </div>
+
+    <br>
+    <button class="btn btn-primary" id="guardarCliente" onclick="guardarClient()">Guardar Cliente</button>
+    <button class="btn btn-primary" id="editarCliente" onclick="editarClient()">Actualizar Cliente</button>
+    <br>
+    <p></p>
+    <h5>Consultar Cliente</h5>
+    <button class="btn btn-primary" id="consultarCliente" onclick="infoClient()"> Consultar Cliente </button>
+    <div id="clients"></div>
+</div>
+<!--                                     MESSAGE -->
+<div id="message">
+    <br>
+    <h5>Adicionar / Actualizar Mensaje</h5>
+    <div id="postmsg">
+        <input type="number" id="idMessage" placeholder="id">
+        <input type="text" id="messageText" placeholder="messagetext">
+        <input type="number" id="idClientM" placeholder="idClient">
+        <input type="number" id="idCarM" placeholder="idCar">
+
+    </div>
+    <br>
+    <button class="btn btn-primary" id="guardarmensaje" onclick="guardarMsg()">Guardar Mensaje</button>
+    <button class="btn btn-primary" id="editarmensaje" onclick="editarMsg()">Actualizar Mensaje</button>
+    <br>
+    <p></p>
+    <h5>Consultar Mensaje</h5>
+    <button class="btn btn-primary" id="consultarMensaje" onclick="infoMsg()"> Consultar Mensaje </button>
+    <div  id="resultadoM"></div>
+</div>
+<div id="reservation">
+    <br>
+    <h5>Adicionar / Actualizar Reservacion</h5>
+    <div id="postReservation">
+        <input type="number" id="idReservation" placeholder="id">
+        <input type="date" id="startDate" placeholder="startDate">
+        <input type="date" id="devolutionDate" placeholder="devolutionDate">
+        <input type="text" id="status" placeholder="status">
+        <input type="number" id="idClientR" placeholder="idClient">
+        <input type="number" id="idCarR" placeholder="idCar">
+        <input type="number" id="idScore" placeholder="idScore">
+    </div>
+    <br>
+    <button class="btn btn-primary" id="guardarReservation" onclick="guardarReservation()">Guardar Mensaje</button>
+    <button class="btn btn-primary" id="editarReservation" onclick="editarReservation()">Actualizar Mensaje</button>
+    <br>
+    <p></p>
+    <h5>Consultar Reservation</h5>
+    <button class="btn btn-primary" id="consultarReservation" onclick="infoReservation()"> Consultar Reservation </button>
+    <div  id="resultadoR"></div>
+</div>
+</body>
+</html>
